@@ -11,6 +11,18 @@ describe('Letter Grade Classifier', () => {
         //Assert
         expect(letterGrade).toEqual("O - Outstanding");
     });
+
+    it('When grade if between 90 to 94.99, it should return V - Very Good', () => {
+        //Arrange
+        const grade = 91;
+
+        //Act
+        const letterGrade = gradeClassifier(grade);
+
+        //Assert
+        expect(letterGrade).toEqual("V - Very Good");
+    });
+
      it('When grade is different return X', () => {
         //Arrange
         const grade = 111;
